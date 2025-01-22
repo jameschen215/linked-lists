@@ -39,6 +39,7 @@ export class LinkedList {
 			this.tail.nextNode = newNode;
 		}
 
+		// set private tail property
 		this.tail = newNode;
 	}
 
@@ -96,7 +97,7 @@ export class LinkedList {
 		let tmp = this.head;
 
 		if (this.size() === 1) {
-			this.#head = null;
+			this.head = null;
 		} else {
 			while (tmp !== null) {
 				if (count === secondToLastIndex) {
@@ -151,7 +152,7 @@ export class LinkedList {
 
 		if (index === 0) {
 			newNode.nextNode = this.head;
-			this.#head = newNode;
+			this.head = newNode;
 		}
 
 		let count = 0;
